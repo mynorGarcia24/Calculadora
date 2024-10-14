@@ -1,0 +1,57 @@
+# Declarar la funcion sumar
+def sumar(a, b):
+    resultado_suma = a + b
+    return resultado_suma
+
+
+# Declarar la funcion restar
+def restar(a, b):
+    resultado_resta = a - b
+    return resultado_resta
+
+
+# Declarar la funcion multiplicar
+def multiplicar(a, b):
+    resultado_multiplicacion = a * b
+    return resultado_multiplicacion
+
+
+# Declarar la funcion dividir
+def dividir(a, b):
+    if b == 0:
+        return "No es posible dividir por cero."
+    resultado_division = a / b
+    return resultado_division
+
+
+while True:
+    print("Calculadora:")
+    print("1. Sumar")
+    print("2. Restar")
+    print("3. Multiplicar")
+    print("4. Dividir")
+    print("5. Salir")
+
+    try:
+        opcion = int(input("Ingrese el número de la operación que desee: "))
+        if opcion == 5:
+            print("Gracias por usar la calculadora. ¡Hasta luego!")
+            break
+        arg_a = float(input('Ingrese el primer número: '))
+        arg_b = float(input('Ingrese el segundo número: '))
+
+        if opcion == 1:
+            resultado = sumar(arg_a, arg_b)
+            print(f'Resultado suma: {resultado}')
+        elif opcion == 2:
+            resultado = restar(arg_a, arg_b)
+            print(f'Resultado resta: {resultado}')
+        elif opcion == 3:
+            resultado = multiplicar(arg_a, arg_b)
+            print(f'Resultado multiplicación: {resultado}')
+        elif opcion == 4:
+            resultado = dividir(arg_a, arg_b)
+            print(f'Resultado división: {resultado}')
+        else:
+            print("Opción no válida.")
+    except ValueError:
